@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="사물인식">
+    <meta name="author" content="ShinDarth">
+
+    <title>포켓몬도감</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <style>body { padding-top:50px; }.navbar-inverse .navbar-nav > li > a { color: #DBE4E1; }</style>
+
+  </head>
+
+  <body>
+    
+    <div class="container">
+
+      <div style="max-width: 650px; margin: auto;">
+        <h1 class="page-header">포켓몬도감 <button type="button" class="btn btn-info" onclick="location.href='./'">Home</button></h1>
+        <p class="lead">포켓몬을 선택해주세요 <span id="max-size"></span> KB.</p>
+
+        <form id="upload-image-form" action="" method="post" enctype="multipart/form-data">
+          <div id="image-preview-div">
+            <label for="exampleInputFile">선택된 포켓몬:</label>
+            <br>
+            <img id="preview-img" src="https://vignette.wikia.nocookie.net/pokemon/images/3/34/1%EC%84%B8%EB%8C%80_%EB%8F%84%EA%B0%90.png/revision/latest?cb=20141004064302&path-prefix=ko" style="width: 400 px; height: 400px;">
+          </div>
+          <div class="form-group">
+            <input type="file" name="file" id="file" required>
+          </div>
+          <button class="btn btn-lg btn-primary" id="upload-button" type="submit" disabled>실행</button>
+        </form>
+
+        <br>
+        <div class="alert alert-info" id="loading" style="display: none;" role="alert">
+          이미지 처리 중...
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+            </div>
+          </div>
+        </div>
+        <div id="message"></div>
+        <div>
+            <h3>도감 보기</h3>
+            <div id="obj_res" class="well well-sm"></div>
+        </div>
+      </div>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="./upload2.js"></script>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+| +-- obj_pokemon_rec : 사물인식&포켓몬도감 프로젝트
+|   +---- summary : 훈련결과 요약(텐서보드 실행하여 그래프로 표현)
+|   +---- templates : 웹으로 표현하기 위한 페이지 및 js 파일
+|   +---- tfr_dir : 훈련 파일들 저장장소
+|     |---- poketmon_image_graph.pb : 내가 직접 훈련시킨 파일 그래프
+|     |---- poketmon_imagenet_map.txt : 내가 직접 훈련시킨 파일 라벨
+|   +---- train : 훈련 시킨 이미지 파일들
+|   +---- validation : 실 테스트를 위한 이미지 파일들
+|   |---- imagenet.py : 사물 인식 파일
+|   |---- predict.py : 포켓몬 인식 파일
+|   |---- retrain.py : 이미지 훈련 파일
+|   |---- server.py : 핵심 서버 파일(실행)
+|   |---- tbd_exc.py : 텐서보드 실행 파일(실행)
